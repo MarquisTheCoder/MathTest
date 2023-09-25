@@ -13,15 +13,15 @@
         <div class="relative overflow-hidden rounded-full h-64 w-64">
             <img th:src="@{/img/Handsome.jpg}" alt="">
         </div>
-        <h1 class="text-6xl font-bold ">Deshawn M. Williams</h1>
+        <h1 class="text-6xl font-bold  text-center w-screen flex flex-row justify-center">Deshawn M. Williams</h1>
     </header>
 
-    <main class="bg-[#36282244]">
+    <main class="bg-[#36282244] w-screen">
         <section class="flex flex-col items-center gap-5 shrink-0">
             <h1 class="text-white font-bold text-5xl mt-20">Solver</h1>
             <form id="problemForm">
                 <div class="flex flex-row border-1 border-[#452C3F]">
-                    <input name="problem" type="text" placeholder="Enter 3 Numbers; Ex 3, 4, 5" class="p-4 rounded-l-md font-bold text-2xl text-black">
+                    <input name="problem" type="text" placeholder="Ex 3, 4, 5" class="p-4 rounded-l-md font-bold text-2xl text-black w-[60vw] md:w-32">
                     <button type="submit" class="text-white text-3xl p-4 font-bold bg-[#452C3F] hover:bg-[#452C3F55] rounded-r-md">Enter</button>
                 </div>    
             </form>
@@ -32,7 +32,7 @@
             <h2 class="font-bold text-4xl text-white mt-10">Code</h2>
     
             <section class="flex flex-col items-center">
-                <pre class="overflow-scroll w-2/3 h-[43rem]">
+                <pre class="overflow-scroll w-screen md:w-2/3 h-[43rem]">
                    <code class="language-java">
                     public class Problem {
                             public String mathFunction(int factorOne, int factorTwo, int product){
