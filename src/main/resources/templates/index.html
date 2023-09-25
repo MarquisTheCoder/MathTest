@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" th:href="@{/css/prism.css}">
+    <title>Deshawn Williams - Entry Springboot Application</title>
+</head>
+<body class="bg-black w-screen h-[60rem] overflow-scroll text-white flex flex-col items-center justify-start shrink-0">
+
+    <header class="pt-32 pb-24 flex flex-col gap-5 items-center bg-[#28221B] w-full">
+        <div class="relative overflow-hidden rounded-full h-64 w-64">
+            <img th:src="@{/img/Handsome.jpg}" alt="">
+        </div>
+        <h1 class="text-6xl font-bold ">Deshawn M. Williams</h1>
+    </header>
+
+    <main class="bg-[#36282244]">
+        <section class="flex flex-col items-center gap-5 shrink-0">
+            <h1 class="text-white font-bold text-5xl mt-20">Solver</h1>
+            <form id="problemForm">
+                <div class="flex flex-row border-1 border-[#452C3F]">
+                    <input name="problem" type="text" placeholder="Enter 3 Numbers; Ex 3, 4, 5" class="p-4 rounded-l-md font-bold text-2xl text-black">
+                    <button type="submit" class="text-white text-3xl p-4 font-bold bg-[#452C3F] hover:bg-[#452C3F55] rounded-r-md">Enter</button>
+                </div>    
+            </form>
+            <section class="flex flex-col gap-2 mt-10">
+                <h2 class="font-bold text-4xl text-white">Result</h2>
+                <p id="result" class="text-6xl font-bold text-white text-center mt-10 h-14 w-full text-blue-400">****</p>
+            </section>
+            <h2 class="font-bold text-4xl text-white mt-10">Code</h2>
+    
+            <section class="flex flex-col items-center">
+                <pre class="overflow-scroll w-2/3 h-[43rem]">
+                   <code class="language-java">
+                    public class Problem {
+                            public String mathFunction(int factorOne, int factorTwo, int product){
+                                String allOperators = "";
+    
+                                if(factorOne == 0 && factorTwo == 0){
+                                    return "+*-/";
+                                }
+                                if (factorOne * factorTwo == product){
+                                    allOperators += '*';
+                                }
+                                if(factorOne / factorTwo == product){
+                                    allOperators += '/';
+                                }
+                                if(factorOne + factorTwo == product){
+                                    allOperators += '+';
+                                }
+                                if(factorOne - factorTwo == product){
+                                    allOperators += '-';
+                                }
+                                if(allOperators.isBlank()){
+                                    return "None";
+                                }else{
+                                    return allOperators;
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            
+        </section>
+    </main>
+
+    <footer>
+         <scripts>
+            <script th:src="@{/js/prism.js}"></script>
+            <script th:src="@{/js/handler.js}"></script> 
+        </scripts>
+    </footer>
+   
+</body>
+</html>
