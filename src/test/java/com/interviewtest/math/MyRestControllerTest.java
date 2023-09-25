@@ -1,9 +1,11 @@
+package com.interviewtest.math;
+
 import static org.hamcrest.Matchers.matchesPattern;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +22,7 @@ public class MyRestControllerTest {
     @Test
     public void testEndpointReturnsAlphanumericValue() throws Exception {
         String endpointUrl = "/api/resource"; // Replace with your actual endpoint URL
-        String requestBody = "{\"key\": \"value\"}"; // Replace with your POST request body
+        String requestBody = "{\"problem\": \"2,2,4\"}"; // Replace with your POST request body
 
         mockMvc.perform(post(endpointUrl)
                 .content(requestBody)
